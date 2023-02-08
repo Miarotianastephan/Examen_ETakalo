@@ -1,0 +1,26 @@
+.containse{
+    margin-left: 250px;
+    margin-top: 10px;
+}
+.echange{
+    font-family: cursive;
+    color: blueviolet;
+}
+.contain-echange{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* padding: 10px; */
+    border-bottom: 1px solid purple;
+}
+.contain-echange a{
+    font-family: cursive;
+    text-decoration: none;
+}
+.contain-echange .accepter{
+    color: rgb(10, 98, 98);
+}
+.contain-echange .refuser{
+    color: red;
+}

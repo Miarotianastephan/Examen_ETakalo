@@ -1,0 +1,223 @@
+.contain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contain-left h1{
+    font-family: cursive;
+    color: rgb(70 143 135);
+}
+.contain-left h4{
+    font-family: cursive;
+    font-weight: lighter;
+    color: grey;
+}
+.contain .contain-left{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.contain .contain-left form{
+    display: flex;
+    flex-direction: column;
+}
+.contain .contain-left form input{
+    outline: none;
+    padding: 8px;
+    margin-top: 20px;
+}
+.contain .contain-left form input[type="submit"]{
+    padding: 9px;
+    border: none;
+    background: rgb(70 143 135);
+    color: white;
+    font-family: cursive;
+    transition: 0.5s;
+}
+.contain .contain-left form input[type="submit"]:hover{
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+.contain .contain-left span {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.contain .contain-left .google{
+    margin-top: 10px;
+    border: 1px solid rgb(187, 187, 187);
+    font-family: cursive;
+    font-weight: lighter;
+    font-size: 13px;
+    padding: 5px;
+}
+.contain .contain-left .sign{
+    font-family: cursive;
+    font-weight: lighter;
+    color: gray;
+    margin-top: 50px;
+}
+.contain .contain-left .sign a{
+    text-decoration: none;
+    color: blue;
+}
+.contain .contain-right{
+    padding: 20px;
+}
+.contain .contain-right img{
+    border-radius: 8px;
+    height: 600px;
+}
+.btn{
+    font-size: 1.6rem;
+    padding: 0.7rem 2.4rem;
+    outline: none;
+    border: none;
+    border-radius: 2rem;
+    color: #fff;
+    font-weight: 600;
+    background-image: linear-gradient(83deg, #f8f7ff 50%, #e0e0e1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+.btn:hover > .ripple{
+    position: absolute;
+    background: rgb(13, 255, 0);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: rippleEffect 1s linear infinite;
+}
+@media screen and (max-width:1200px) {
+    .contain .contain-right{
+        display: none;
+    }
+    .contain .contain-left{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.filter-project-item.show {
+    transition: 1s;
+    animation: show 2s ;
+}
+@keyframes show {
+    0%{
+        transition: 1s;
+        opacity: .25;
+    }
+    50%{
+        transition: 5s ;
+        opacity: .75;
+    }
+    100%{
+         backface-visibility: visible;
+        visibility: visible;
+    }
+}
+.filter-project-item.show  input{
+    transition: 1s;
+    animation: input 2s;
+}
+@keyframes input {
+    0%{
+        transition: .5s;
+        width: 30%
+    }
+    50%{
+        transition: .5s;
+        width: 60%;
+    }
+    100%{
+        transition: .5s;
+        width: 100%;
+    }
+}
+  .filter-project-item.hide {
+   display: none;
+}
+.filter-project-item.hide input{
+    width: 0%;
+    backface-visibility: hidden;
+    visibility: hidden;
+}
+.filter-project-item.hide h4{
+    width: 0%;
+    backface-visibility: hidden;
+    visibility: hidden;
+}
+.filter-project-item.hide h1{
+    width: 0%;
+    backface-visibility: hidden;
+    visibility: hidden;
+}
+.filter-project-item.hide span{
+    width: 0%;
+    backface-visibility: hidden;
+    visibility: hidden;
+}
+.error{
+    display: flex;
+    opacity: 0;
+    width: 200px;
+    color: rgb(255, 0, 0);
+    animation: error 3s;
+    justify-content: center;
+    font-family: cursive;
+}
+@keyframes error {
+    0%{
+        padding: 5px;
+        display: flex;
+        text-align: center;
+        background: rgb(231, 23, 165);
+        transition: 2s;
+        transform: translate(30px , 0px);
+    }
+    50%{
+        display: flex;
+        text-align: center;
+        padding: 5px;
+        background: rgb(231, 23, 165);
+        opacity: 1;
+        transition: 2s;
+        transform: translate(100px , 0px);
+    }
+    100%{
+        display: none;
+    }
+}
+
+.succes{
+    display: flex;
+    opacity: 0;
+    width: 200px;
+    color: rgb(38, 255, 0);
+    animation: succes 3s;
+    justify-content: center;
+    font-family: cursive;
+}
+@keyframes succes {
+    0%{
+        padding: 5px;
+        display: flex;
+        text-align: center;
+        background: rgb(64, 242, 144);
+        transition: 2s;
+        transform: translate(30px , 0px);
+    }
+    50%{
+        display: flex;
+        text-align: center;
+        padding: 5px;
+        background: rgb(35, 193, 106);
+        opacity: 1;
+        transition: 2s;
+        transform: translate(100px , 0px);
+    }
+    100%{
+        display: none;
+    }
+}

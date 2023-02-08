@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:cursive;
+}
+
+body{
+    height: 100vh;
+    align-items: center;
+}
+
+/* contanier */
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: #f8f8f89c;
+    padding: 25px 30px;
+    box-shadow: 2px 2px 2px rgb(37 95 201 / 30%);
+    border-radius: 5px;
+}
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.container .title::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: #1138d7;
+}
+
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-details .input-box .details, .gender-detail .gender-title{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 17px;
+}
+
+.user-details .input-box input, .user-details .input-box select{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 11px;
+    font-weight: bolder;
+    border-bottom-width: 2px;
+    transition:all 0.3s ease;
+}
+
+
+.user-details .input-box input:focus,.user-details .input-box input:hover,
+.user-details .input-box select:focus,.user-details .input-box select:hover{
+    border-color: #2f42af;
+}
+
+form .gender-detail .categorie{
+    display: flex;
+    
+    width: 80%;
+    justify-content: space-between;
+}
+.gender-detail .categorie label{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+.gender-detail .categorie .dot{
+    width: 18px;
+    height: 18px;       
+    border-radius: 50%;
+    background: #d9d9d9;
+    margin-right: 10px;
+    border: 5px solid transparent;
+}
+
+#dot-1:checked ~ .categorie label .dot-1,
+#dot-2:checked ~ .categorie label .dot-2,
+#dot-4:checked ~ .categorie label .dot-4,
+#dot-5:checked ~ .categorie label .dot-5,
+#dot-6:checked ~ .categorie label .dot-6,
+#dot-7:checked ~ .categorie label .dot-7,
+#dot-8:checked ~ .categorie label .dot-8,
+#dot-3:checked ~ .categorie label .dot-3{
+    transition:all 0.3s ease;
+    border-color: #d9d9d9; 
+    border-color: #38343a;
+    background:  #af2f2f;
+}
+
+/*form input[type="checkbox"]{
+    display: none;
+}*/
+
+form .button {
+    height: 30px;
+    margin: 30px 0;
+}
+
+form .button input{
+    color: #fff;
+    outline: none;
+    padding: 5px;
+    width: 200px;
+    border: none;
+    font-size: 15px;
+    background: #002780;
+}
+form .button input:hover{
+    background: linear-gradient(-135deg,#a9b4bb,#38343a);
+}
+
+.input-box .details label{
+    display: inline-block;
+    background-color: #2f8aaf;
+    padding: 10px;
+    font-size: 10px;
+    color: white;
+    cursor: pointer;
+}
+.input-box .details label i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+.input-box .details label:active{
+    transform: scale(0.9);
+}
+
+@media (max-width: 584px){
+    .container{
+        max-width: 100%;
+    }
+    form .user-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    form .gender-detail .categorie{
+        width: 100%;
+    }
+    .container form .user-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar{
+        width: 2px;
+        /* margin-left: 12px; */
+    }
+    /* .user-details::-webkit-scrollbar-track{
+        background:#a9b4bb
+    } */
+}
+
+.goservice{
+    width: 25%;
+    padding: 5px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+.goservice small a{
+    text-decoration: none;
+}
+.content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 150px;
+}
+.content .tit h1{
+    font-weight: lighter;
+    font-size: 60px;
+    color: #2f42af;
+}
